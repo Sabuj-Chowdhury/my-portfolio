@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 import heroImg from "../assets/heroBg.jpg";
 
 const Home = () => {
@@ -16,6 +17,11 @@ const Home = () => {
   const imageZoom = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: { scale: 1, opacity: 1 },
+  };
+
+  const bounceOnHover = {
+    whileHover: { scale: 1.1 },
+    whileTap: { scale: 0.9 },
   };
 
   return (
@@ -37,10 +43,10 @@ const Home = () => {
           variants={fadeInUp}
           className="text-lg md:text-xl font-light mb-6 text-gray-300"
         >
-          A passionate web developer specializing in
-          <span className="text-amber-500">React</span>,
-          <span className="text-amber-500">TailwindCSS</span>, basic
-          <span className="text-amber-500">Express</span>, and
+          A passionate web developer specializing in{" "}
+          <span className="text-amber-500">React</span>,{" "}
+          <span className="text-amber-500">TailwindCSS</span>, basic{" "}
+          <span className="text-amber-500">Express</span>, and{" "}
           <span className="text-amber-500">MongoDB CRUD operations</span>.
         </motion.p>
         {/* Button */}
@@ -53,6 +59,42 @@ const Home = () => {
           <button className="px-6 py-3 bg-amber-400 text-black font-medium text-lg rounded-lg shadow-md hover:bg-amber-500 transition-all">
             Download CV
           </button>
+        </motion.div>
+        {/* Social Links */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.6, duration: 0.8 }}
+          variants={fadeInUp}
+          className="flex mt-8 gap-4 p-4 bg-gray-800 shadow-lg rounded-lg justify-center"
+        >
+          <motion.a
+            href="https://github.com/Sabuj-Chowdhury"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-amber-400 transition-all"
+            {...bounceOnHover}
+          >
+            <FaGithub />
+          </motion.a>
+          <motion.a
+            href="https://www.facebook.com/sc2706r/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-amber-400 transition-all"
+            {...bounceOnHover}
+          >
+            <FaFacebook />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/sabuj-chowdhury-8524a1b4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-amber-400 transition-all"
+            {...bounceOnHover}
+          >
+            <FaLinkedin />
+          </motion.a>
         </motion.div>
       </motion.div>
       {/* Image Section */}
