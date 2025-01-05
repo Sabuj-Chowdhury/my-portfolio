@@ -1,8 +1,39 @@
 import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const form = e.target;
+
+    emailjs
+      .sendForm(
+        `${import.meta.env.VITE_service_id}`,
+        `${import.meta.env.VITE_template_id}`,
+        form,
+        `${import.meta.env.VITE_user_id}`
+      )
+      .then(
+        (result) => {
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thank you for reaching out. I'll get back to you shortly.",
+            confirmButtonColor: "#3085d6",
+          });
+          form.reset();
+        },
+        (error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. Please try again later.",
+            confirmButtonColor: "#d33",
+          });
+        }
+      );
   };
 
   return (
@@ -22,7 +53,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              name="name"
+              name="user_name"
               required
               className="w-full p-2 mt-2 bg-gray-700 text-white rounded focus:outline-none focus:ring focus:ring-amber-400"
               placeholder="Your Name"
@@ -76,13 +107,13 @@ const Contact = () => {
         </h2>
         <div className="flex items-center space-x-2">
           <FaEnvelope className="text-amber-400" />
-          <a href="mailto:your-email@example.com" className="text-white">
+          <a href="mailto:csabuj73@gmail.com" className="text-white">
             csabuj73@gmail.com
           </a>
         </div>
         <div className="flex items-center space-x-2">
           <FaPhone className="text-amber-400" />
-          <a href="tel:+1234567890" className="text-white">
+          <a href="tel:+918293616909" className="text-white">
             +91 8293616909
           </a>
         </div>
