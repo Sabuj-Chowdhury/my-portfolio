@@ -56,10 +56,15 @@ const Banner = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           variants={fadeInUp}
         >
-          <button className="px-6 py-3 bg-amber-400 text-black font-medium text-lg rounded-lg shadow-md hover:bg-amber-500 transition-all">
+          <a
+            href="/Portfolio-client/public/Sabuj Chowdhury.pdf"
+            download="Sabuj_Chowdhury_CV.pdf"
+            className="px-6 py-3 bg-amber-400 text-black font-medium text-lg rounded-lg shadow-md hover:bg-amber-500 transition-all inline-block"
+          >
             Download CV
-          </button>
+          </a>
         </motion.div>
+
         {/* Social Links */}
         <motion.div
           initial="hidden"

@@ -2,9 +2,9 @@ const Education = () => {
   const educations = [
     {
       year_start: 2022,
-      year_end: 2025,
+      year_end: "2025 (expected)",
       institution: "University of Burdwan",
-      degree: "B.Sc in Computer Science",
+      degree: "B.Sc (Hons.) in Computer Science",
       location: "Burdwan, West Bengal",
     },
     {
