@@ -43,10 +43,10 @@ const Banner = () => {
           variants={fadeInUp}
           className="text-lg md:text-xl font-light mb-6 text-gray-300"
         >
-          A passionate web developer specializing in{" "}
-          <span className="text-amber-500">React</span>,{" "}
-          <span className="text-amber-500">TailwindCSS</span>, basic{" "}
-          <span className="text-amber-500">Express</span>, and{" "}
+          A passionate web developer specializing in
+          <span className="text-amber-500">React</span>,
+          <span className="text-amber-500">TailwindCSS</span>, basic
+          <span className="text-amber-500">Express</span>, and
           <span className="text-amber-500">MongoDB CRUD operations</span>.
         </motion.p>
         {/* Button */}
@@ -57,11 +57,11 @@ const Banner = () => {
           variants={fadeInUp}
         >
           <a
-            href="/Portfolio-client/public/Sabuj Chowdhury.pdf"
-            download="Sabuj_Chowdhury_CV.pdf"
+            href="/resume_of_Sabuj_Chowdhury.pdf"
+            download="resume_of_Sabuj_Chowdhury.pdf"
             className="px-6 py-3 bg-amber-400 text-black font-medium text-lg rounded-lg shadow-md hover:bg-amber-500 transition-all inline-block"
           >
-            Download CV
+            Download Resume
           </a>
         </motion.div>
 

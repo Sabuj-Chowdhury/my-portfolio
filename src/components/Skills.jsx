@@ -38,10 +38,10 @@ const Skills = () => {
             <FaReact size={40} className="text-blue-300" />
             <span className="text-gray-300 text-lg">React</span>
           </div>
-          <div className="flex flex-col items-center gap-2 transition-all hover:scale-110 hover:text-amber-400">
+          {/* <div className="flex flex-col items-center gap-2 transition-all hover:scale-110 hover:text-amber-400">
             <FaNodeJs size={40} className="text-green-500" />
             <span className="text-gray-300 text-lg">Node.js</span>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center gap-2 transition-all hover:scale-110 hover:text-amber-400">
             <SiExpress size={40} className="text-gray-400" />
             <span className="text-gray-300 text-lg">Express</span>
