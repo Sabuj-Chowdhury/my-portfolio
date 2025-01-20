@@ -4,9 +4,9 @@ const ProjectCard = ({ project }) => {
   const { projectTitle, technologyUsed, imageUrl, _id } = project || {};
 
   return (
-    <div className="bg-black border border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 max-w-sm mx-auto">
+    <div className="bg-black border border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 w-72 h-[28rem] mx-auto">
       {/* Image */}
-      <figure className="w-full h-56">
+      <figure className="w-full h-40">
         <img
           src={imageUrl}
           alt={projectTitle}
@@ -15,15 +15,15 @@ const ProjectCard = ({ project }) => {
       </figure>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col justify-between h-[calc(28rem-10rem)]">
         {/* Title */}
         <h2 className="text-lg md:text-xl text-amber-400 font-semibold">
           {projectTitle}
         </h2>
 
         {/* Technology Badges */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {technologyUsed.map((tech, index) => (
+        <div className="mt-4 flex flex-wrap gap-2 overflow-hidden h-16">
+          {technologyUsed.slice(0, 4).map((tech, index) => (
             <span
               key={index}
               className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full"
@@ -31,6 +31,11 @@ const ProjectCard = ({ project }) => {
               {tech}
             </span>
           ))}
+          {technologyUsed.length > 4 && (
+            <span className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full">
+              +{technologyUsed.length - 4} more
+            </span>
+          )}
         </div>
 
         {/* View Details Button */}
