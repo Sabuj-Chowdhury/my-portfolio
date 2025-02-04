@@ -25,6 +25,19 @@ const Navbar = () => {
         {/* Large Screen Links */}
         <div className="hidden md:flex items-center space-x-5">
           <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `transition-all px-3 py-2 rounded-md ${
+                isActive
+                  ? "bg-amber-500 text-black font-semibold"
+                  : "hover:text-amber-400"
+              }`
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
             to="/about"
             className={({ isActive }) =>
               `transition-all px-3 py-2 rounded-md ${
@@ -74,6 +87,20 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-black text-gray-300">
           <div className="flex flex-col items-center py-4 space-y-4">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `transition-all px-4 py-2 rounded-md ${
+                  isActive
+                    ? "bg-amber-500 text-black font-semibold"
+                    : "hover:text-amber-400"
+                }`
+              }
+              onClick={toggleMenu}
+            >
+              Home
+            </NavLink>
+
             <NavLink
               to="/about"
               className={({ isActive }) =>
