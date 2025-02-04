@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../page/Home";
-import About from "../components/About";
-import Contact from "../components/Contact";
 import AddProjects from "../components/AddProjects";
-import Projects from "../components/Projects";
 import ProjectDetails from "../page/ProjectDetails";
+import ContactPage from "../page/ContactPage";
+import AboutPage from "../page/AboutPage";
+import ProjectsPage from "../page/ProjectsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,15 +17,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About></About>,
+        element: <AboutPage />,
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <ContactPage />,
       },
       {
         path: "/projects",
-        element: <Projects></Projects>,
+        element: <ProjectsPage />,
       },
       {
         path: "/project-details/:id",
